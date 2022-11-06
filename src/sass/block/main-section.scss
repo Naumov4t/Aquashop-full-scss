@@ -1,0 +1,209 @@
+.main-section {
+    margin-top: 30px;
+    position: relative;
+    height: 320px;
+    background: $gradient;
+
+    &__drip-icon-top {
+        position: absolute;
+        top: -1px;
+        width: 100%;
+        height: 32%;
+        background-image: url('../img/dripping-icon-top.svg');
+        background-repeat: repeat-x;
+        background-size: 100%;
+    }
+
+    &__drip-icon-bottom {
+        position: absolute;
+        bottom: -31%;
+        width: 100%;
+        height: 32%;
+        background-image: url('../img/dripping-icon-bottom.svg');
+        background-repeat: repeat-x;
+        background-size: 100%;
+    }
+
+    &__text-wrapper {
+        position: relative;
+        top: 30%;
+        margin: 0 20px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: $gradient;
+
+        &:after {
+            content: "";
+            display: block;    
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;      
+            left: 0;   
+            background: transparent;
+            background-color: $white;
+            opacity: 0.1;
+            z-index: 0;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 2px;
+        color: $white;
+
+        & span {
+            color: $mint-green;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        left: 50%;
+        top: 77%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        border: 2px solid $mint-green;
+        background-image: url("../img/main-btn-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #ffffff20;
+    }
+}
+
+@media (min-width: 375px) {
+    .main-section {
+        margin-top: 35px;
+        height: 380px;
+
+        &__text {
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+
+        &__button {
+            top: 75%;
+            width: 75px;
+            height: 75px;
+            background-size: 27px;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .main-section {
+        margin-top: 40px;
+        height: 420px;
+
+        &__text-wrapper {
+            top: 33%;
+        }
+
+        &__button {
+            width: 80px;
+            height: 80px;
+            background-size: 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main-section {
+        height: 450px;
+
+        &__drip-icon-top {
+            height: 45%;
+        }
+
+        &__drip-icon-bottom {
+            bottom: -39%;
+            height: 40%;  
+        }
+
+        &__text-wrapper {
+            top: 41%;
+            margin: 0 auto;
+            width: 660px;
+            height: 80px;
+        }
+
+        &__text {
+            font-size: 26px;
+        }
+
+        &__button {
+            top: 80%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-section {
+        height: 520px;
+
+        &__drip-icon-top {
+            height: 50%;
+        }
+
+        &__drip-icon-bottom {
+            bottom: -49%;
+            height: 50%;
+        }
+
+        &__text-wrapper {
+            top: 48%;
+            width: 800px;
+        }
+
+        &__text {
+            letter-spacing: 4px;
+        }
+
+        &__button {
+            top: 82%;
+            transition: .2s;
+
+            &:hover {
+                transition: .2s;
+                background-color: #ffffff40;
+            }
+
+            &:active {
+                scale: .98;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .main-section {
+        height: 600px;
+
+        &__text-wrapper {
+            top: 50%;
+            height: 90px;
+            width: 1080px;
+        }
+
+        &__text {
+            font-size: 38px;
+            letter-spacing: 7px;
+        }
+
+        &__button {
+            top: 84%;
+            height: 100px;
+            width: 100px;
+            background-size: 40px;
+        }
+    }
+}

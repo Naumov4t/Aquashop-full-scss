@@ -1,0 +1,314 @@
+.offers-section {
+    margin-top: 60px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin: 0;
+        align-self: center;
+        font-size: $mobile-section-title;
+        color: $main-dark;
+    }
+
+    &__item-list {
+        margin: 30px 0 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__button {
+        margin: 30px 0 0;
+        padding: 13px 0;
+        height: 60px;
+        font-size: 18px;
+        @include section-btn-mobile;
+    }
+}
+
+.offers-item {
+    height: 130px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__picture {
+        position: relative;
+        height: inherit;
+        width: 100%;
+        @include picture-position-mobile;
+        
+
+        &:after {
+            content: "";
+            display: block;    
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;      
+            left: 0;   
+            background: transparent;
+            background: $dark-gradient;
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        &--1 {
+            background-image: url("../img/offer-item-1.jpg");
+        }
+
+        &--2 {
+            background-image: url("../img/offer-item-2.jpg");
+        }
+
+        &--3 {
+            background-image: url("../img/offer-item-3.jpg");
+        }
+
+        &--4 {
+            background-image: url("../img/offer-item-4.jpg");
+        }
+
+        &--5 {
+            background-image: url("../img/offer-item-5.jpg");
+        }
+
+        &--6 {
+            background-image: url("../img/offer-item-6.jpg");
+        }
+    }
+
+    &__title-wrapper {
+        padding: 0 10px;
+        position: relative;
+        z-index: 2;
+        bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        padding-top: 5px;
+        margin: 0;
+        font-size: 16px;
+        color: $white;
+        font-weight: $weight-medium;
+    }
+
+    &__move-btn {
+        width: 45px;
+        height: 45px;
+        @include move-btn-white;
+    }
+}
+
+
+@media (min-width: 375px) {
+    .offers-section {
+        margin-top: 60px;
+        padding: 0 25px;
+
+        &__button {
+            margin: 30px 0 0;
+        }
+    }
+
+    .offers-item {
+
+        &__title-wrapper {
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .offers-section {
+        margin-top: 70px;
+    }
+
+    .offers-item {
+
+        &__title-wrapper {
+            bottom: 65px;
+        }
+
+        &__title {
+            padding-top: 8px;
+            font-size: 18px;
+        }
+
+        &__move-btn {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .offers-section {
+        position: relative;
+        margin-top: 90px;
+        padding: 0 60px;
+
+        &__title {
+            margin-left: 10px;
+            align-self: flex-start;
+            font-size: $tablet-section-title;
+        }
+
+        &__item {
+            width: 49%;
+            min-width: 310px;
+            height: 205px;
+
+            &:nth-child(2n+1) {
+                margin-right: 12px;
+            }
+        }
+
+        &__item-list {
+            margin: 50px 0 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+        &__button {
+            position: absolute;
+            right: 70px;
+            top: -10px;
+            margin: 0;
+            padding: 12px 0;
+            width: 200px;
+            height: 55px;
+            font-size: 16px;
+        }
+    }
+
+    .offers-item {
+
+        &__title-wrapper {
+            bottom: 65px;
+        }
+
+        &__title {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .offers-section {
+        margin-top: 130px;
+        padding: 0 100px;
+
+        &__title {
+            margin-left: 20px;
+            font-size: $sm-desktop-section-title;
+        }
+
+        &__button {
+            right: 120px;
+            padding: 14px 0;
+            width: 220px;
+            height: 60px;
+            font-size: 18px;
+            @include section-btn-desktop;
+
+            &:hover {
+                background-position: 99% 0;
+                transition: all .4s ease-in-out;
+                color: $white;
+            }
+
+            &:active {
+                scale: .98;
+            }
+        }
+
+        &__item {
+            height: 280px;
+
+            &:nth-child(2n+1) {
+                margin-right: 2%;
+            }
+        }
+    }
+
+    .offers-item {
+
+        &__title-wrapper {
+            padding: 0 20px;
+            bottom: 70px;
+        }
+    
+        &__title {
+            font-size: 18px;
+        }
+
+        &__move-btn {
+            transition: .2s;
+
+            &:hover {
+                transition: .2s;
+                scale: 1.05;
+            }
+
+            &:active {
+                scale: .98;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .offers-section {
+        margin-top: 150px;
+        padding: 0 130px;
+
+        &__title {
+            font-size: $lg-desktop-section-title;
+        }
+
+        &__button {
+            right: 150px;
+            padding: 15px 0;
+            width: 250px;
+            height: 70px;
+            font-size: 22px;
+        }
+
+        &__item-list {
+            row-gap: 40px;
+        }
+    }
+
+    .offers-item {
+        height: 400px;
+        max-width: 570px;
+
+        &:nth-child(2n+1) {
+            margin-right: 40px;
+        }
+
+        &__title-wrapper {
+            padding: 0 25px;
+            bottom: 80px;
+        }
+
+        &__title {
+            padding-top: 15px;
+            font-size: 22px;
+        }
+
+        &__move-btn {
+            width: 60px;
+            height: 60px;
+            background-size: 15px;
+        }
+    }
+}

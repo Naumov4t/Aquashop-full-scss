@@ -1,0 +1,280 @@
+.footer-left {
+    background-color: $main-dark;
+}
+
+.footer-form {
+    margin: 0 20px;
+    padding-top: 90px;
+    color: $white;
+    text-align: center;
+
+    &__title {
+        margin: 0;
+        font-size: 22px;
+        font-weight: $weight-semi;
+    }
+
+    &__subtitle {
+        max-width: 285px;
+        font-size: 18px;
+        margin: 10px auto 0;
+    }
+
+    &__input {
+        margin: 40px 0 0;
+        padding: 0 20px;
+        display: block;
+        height: 60px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: $weight-medium;
+        color: $main-dark;
+        background-color: $white;
+        border: none;
+        transition: 0.2s;
+
+        &::-webkit-input-placeholder {
+            color: $main-dark;
+        }
+
+        &:-moz-placeholder {
+            color: $main-dark;
+        }
+
+        &::-moz-placeholder {
+            color: $main-dark;
+        }
+
+        &:-ms-input-placeholder {
+            color: $main-dark;
+        }
+
+        &:focus {
+            transition: 0.2s;
+            outline: 3px solid $aqua-blue;
+        }
+
+        &:hover {
+            transition: 0.2s;
+            outline: 3px solid $aqua-blue;
+        }
+    }
+
+    &__submit-btn {
+        margin: 20px 0 60px;
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+        font-weight: $weight-medium;
+        color: $white;
+        background: $gradient;
+        border: 3px solid $white;
+    }
+}
+
+.footer-right {
+    background-color: $white;
+    border: 3px solid $main-dark;
+    padding-bottom: 50px;
+    margin-bottom: 5px;
+
+    &__title-list {
+        margin: 40px 20px 30px;
+        font-size: 22px;
+        font-weight: $weight-semi;
+    }
+
+    &__list {
+        margin: 0 20px;
+        padding: 0;
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+
+        & li:nth-child(2n) {
+            text-align: right;
+        }
+    }
+
+    &__item {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: $weight-semi;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 375px) {
+    .footer-form {
+        margin: 0 25px;
+        padding-top: 100px;
+    }
+
+    .footer-right {
+
+        &__title-list {
+            margin: 40px 25px 30px;
+        }
+
+        &__list {
+            margin: 0 25px;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .footer-form {
+        padding-top: 120px;
+
+        &__input {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-form {
+        margin: 0 180px;
+        padding-top: 160px;
+
+        &__subtitle {
+            margin: 15px auto 0;
+            max-width: none;
+        }
+
+        &__input {
+            margin: 30px 0 0;
+        }
+
+        &__submit-btn {
+            margin: 20px 0 65px;;
+        }
+    }
+
+    .footer-right {
+        padding: 20px 160px 55px;
+
+        &__list {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        &__item {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        display: flex;
+    }
+
+    .footer-left {
+        width: 50%;
+    }
+
+    .footer-right {
+        padding: 160px 100px 55px;
+        margin-bottom: 0;
+        width: 50%;
+        border: none;
+
+        &__title-list {
+            margin: 40px 25px 30px 0;
+            font-size: 26px;
+        }
+
+        &__list {
+            margin: 0;
+        }
+
+        &__item {
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                color: $aqua-blue;
+                transition: .2s;
+            }
+        }
+    }
+
+    .footer-form {
+        padding-top: 200px;
+        margin: 0 100px;
+
+        &__title-wrapper {
+            text-align: left;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
+
+        &__input {
+            margin: 50px 0 0;
+            height: 70px;
+            font-size: 21px;
+        }
+
+        &__submit-btn {
+            margin: 20px 0 95px;
+            height: 70px;
+            @include footer-btn-desktop;
+            cursor: pointer;
+
+            &:hover {
+                background-position: 99% 0;
+                transition: all .4s ease-in-out;
+            }
+
+            &:active {
+                scale: .98;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer-form {
+        margin: 0 135px;
+        padding-top: 280px;
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__subtitle {
+            font-size: 26px;
+        }
+
+        &__input {
+            padding: 0 25px;
+            height: 80px;
+            font-size: 22px;
+        }
+
+        &__submit-btn {
+            height: 80px;
+            font-size: 22px;
+        }
+    }
+
+    .footer-right {
+        padding: 235px 100px 55px;
+
+        &__title-list {
+            font-size: 34px;
+        }
+
+        &__item {
+            font-size: 24px;
+        }
+    }
+}

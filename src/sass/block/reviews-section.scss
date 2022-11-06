@@ -1,0 +1,463 @@
+.reviews-section {
+    margin-top: 60px;
+    position: relative;
+    height: 450px;
+    background: $gradient;
+
+    &__drip-icon-top {
+        position: absolute;
+        top: -1px;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/dripping-icon-top.svg');
+        background-repeat: repeat-x;
+        background-size: 100%;
+    }
+
+    &__drip-icon-bottom {
+        position: absolute;
+        bottom: -24%;
+        width: 100%;
+        height: 110px;
+        background-image: url('../img/dripping-icon-bottom.svg');
+        background-repeat: repeat-x;
+        background-size: 100%;
+    }
+
+    &__title {
+        position: relative;
+        top: 20%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: $mobile-section-title;
+        color: $white;
+    }
+
+    &__slider-container {
+        position: relative;
+        top: 30%;
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.reviews-slider-item {
+    margin: 0 15px;
+    padding: 15px 10px 15px 15px;
+    background-color: #ffffff20;
+    border-radius: 10px;
+    display: none;
+
+    &--active {
+       display: flex;
+    }
+    
+}
+
+.reviews-user {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__name {
+        width: 75px;
+        max-width: 75px;
+        margin: 5px 0 0 0;
+        font-size: 12px;
+        font-weight: $weight-medium;
+        color: $white;
+    }
+
+    &__location {
+        width: max-content;
+        margin-top: 8px;
+        padding-left: 10px;
+        font-size: 9px;
+        font-weight: $weight-medium;
+        color: $white;
+        background-image: url("../img/location-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 7px;
+        background-position: 0% 45%;
+    }
+}
+
+.reviews-quote {
+    position: relative;
+
+    &__quote-icon-top {
+        position: relative;
+        z-index: 0;
+        width: 40px;
+        height: 32px;
+        background-image: url("../img/quote-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    &__quote-icon-bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 40px;
+        height: 32px;
+        background-image: url("../img/quote-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform: rotate(180deg);
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 0 10px;
+        min-width: 170px;
+        min-height: 85px;
+        overflow: hidden;
+        font-size: 10px;
+        font-weight: $weight-medium;
+        color: $white;
+
+    }
+
+    &__score {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: $weight-medium;
+        color: $mint-green;
+    }
+}
+
+.reviews-controller {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 25px 0 0 0;
+    padding: 0;
+    cursor: pointer;
+
+    &__item {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: #ffffff50;
+        transition: .1s;
+
+        &:hover {
+            transition: .2s;
+            background-color: $white;
+        }
+
+        &--active {
+            transition: .2s;
+            background-color: $white;
+        }
+
+        &:not(:last-child) {
+            margin: 0 10px 0 0;
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    .reviews-section {
+        height: 470px;
+        
+        &__title {
+            top: 23%;
+        }
+
+        &__drip-icon-bottom {
+            bottom: -23%;
+        }
+    }
+
+    .reviews-slider-item {
+        margin: 0 25px;
+        padding: 20px 20px 30px 20px;
+    }
+
+    .reviews-user {
+
+        &__location {
+            padding-left: 12px;
+            font-size: 10px;
+            background-size: 8px;
+        }
+    }
+
+    .reviews-quote {
+
+        &__quote-icon-bottom {
+            bottom: -5px;
+        }
+
+        &__text {
+            margin: 5px 0 0 15px;
+        }
+
+        &__score {
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .reviews-section {
+        height: 500px;
+
+        &__drip-icon-bottom {
+            height: 130px;
+            bottom: -26%;
+        }
+
+        &__title {
+            top: 25%;
+        }
+
+        &__slider-container {
+            top: 32%;
+        }
+    }
+
+    .reviews-user {
+        margin-right: 20px;
+    }
+
+    .reviews-quote {
+
+        &__text {
+            margin: 5px 0 0 20px;
+            font-size: 12px;
+        }
+
+        &__score {
+            font-size: 12px;
+            margin-left: 20px;
+        }
+    }  
+}
+
+@media (min-width: 768px) {
+    .reviews-section {
+        height: 540px;
+
+        &__title {
+            top: 30%;
+            margin-left: 70px;
+            text-align: left;
+            font-size: $tablet-section-title;
+        }
+
+        &__drip-icon-bottom {
+            height: 180px;
+            bottom: -32%;
+        }
+
+        &__slider-container {
+            top: 40%;
+        }
+    }
+
+    .reviews-slider-item {
+        margin: 0;
+        padding: 20px 30px 30px;
+        width: 570px;
+    }
+
+    .reviews-user {
+        margin-right: 30px;
+        width: 130px;
+
+        &__photo {
+            align-self: center;
+        }
+
+        &__name {
+            width: 100%;
+            max-width: 130px;
+        }
+    }
+
+    .reviews-quote {
+        width: 350px;
+    }
+
+    .reviews-controller {
+        margin: 30px 0 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .reviews-section {
+        margin-top: 100px;
+        height: 700px;
+
+        &__title {
+            top: 33%;
+            margin-left: 120px;
+            font-size: $sm-desktop-section-title;
+        }
+
+        &__drip-icon-bottom {
+            height: 255px;
+            bottom: -35%;
+        }
+    }
+
+    .reviews-slider-item {
+        padding: 25px 35px 40px;
+        width: 660px;
+        height: 260px;
+    }
+
+    .reviews-user {
+        margin-top: 15px;
+        margin-right: 25px;
+        width: 160px;
+
+        &__photo {
+            width: 90px;
+            height: 90px;
+        }
+
+        &__name {
+            margin: 20px 0 0;
+            max-width: none;
+            font-size: 16px;
+        }
+
+        &__location {
+            font-size: 14px;
+            background-size: 12px;
+            padding-left: 18px;
+        }
+    }
+
+    .reviews-quote {
+        width: 400px;
+
+        &__text {
+            margin: 5px 0 0 25px;
+            max-height: 125px;
+            font-size: 16px;
+        }
+
+        &__quote-icon-top {
+            width: 60px;
+            height: 50px;
+        }
+    
+        &__quote-icon-bottom {
+            right: -15px;
+            width: 60px;
+            height: 50px;
+        }
+
+        &__score {
+            margin-left: 25px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .reviews-section {
+        margin-top: 120px;
+        height: 880px;
+
+        &__drip-icon-bottom {
+            bottom: -28%;
+        }
+
+        &__title {
+            margin-left: 150px;
+            font-size: $lg-desktop-section-title;
+        }
+
+        &__slider-container {
+            top: 39%;
+        }
+    }
+
+    .reviews-slider-item {
+        padding: 25px 35px 40px 45px;
+        width: 1000px;
+        height: 340px;
+    }
+
+    .reviews-user {
+        margin-top: 35px;
+        width: 200px;
+
+        &__photo {
+            width: 120px;
+            height: 120px;
+        }
+
+        &__name {
+            font-size: 20px;
+        }
+
+        &__location {
+            margin-top: 10px;
+            padding-left: 23px;
+            font-size: 16px;
+            background-size: 16px;
+            background-position: 0% 0%;
+        }
+    }
+
+    .reviews-quote {
+        width: 680px;
+
+        &__quote-icon-top {
+            height: 65px;
+            width: 80px;
+        }
+
+        &__quote-icon-bottom {
+            height: 65px;
+            width: 80px;
+        }
+
+        &__text {
+            margin: 5px 0 0 45px;
+            min-height: 140px;
+            font-size: 22px;
+        }
+
+        &__score {
+            margin-left: 45px;
+            font-size: 22px;
+        }
+    }
+
+    .reviews-controller {
+        margin: 45px 0 0 0;
+
+        &__item {
+            width: 20px;
+            height: 20px;
+
+            &:not(:last-child) {
+                margin: 0 15px 0 0;
+            }
+        }
+    }
+}

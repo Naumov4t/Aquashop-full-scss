@@ -1,0 +1,126 @@
+//buttons
+@mixin move-btn-white {
+    background-color: $white;
+    background-image: $move-btn-icon;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    border-radius: 100%;
+}
+
+@mixin move-btn-grey {
+    background-color: $grey;
+    background-image: $move-btn-icon;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    border-radius: 100%;
+}
+
+@mixin section-btn-mobile {
+    text-align: center;
+    color: $white;
+    font-weight: $weight-medium;
+    background-image: $gradient;
+    border: 3px solid $main-dark;
+    text-decoration: none;
+}
+
+@mixin section-btn-desktop {
+    text-align: center;
+    color: $main-dark;
+    font-weight: $weight-medium;
+    background-image: $desk-gradient;
+    background-size: 300% 100%;
+    border: 3px solid $main-dark;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+
+@mixin footer-btn-desktop {
+    text-align: center;
+    color: $white;
+    font-weight: $weight-medium;
+    background-image: $desk-footer-gradient;
+    background-size: 300% 100%;
+    border: 3px solid $white;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+
+
+//offers
+@mixin picture-position-mobile {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+//advantages
+@mixin advantage-icon-1 {
+    background-image: $advantage-icon-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@mixin advantage-icon-2 {
+    background-image: $advantage-icon-2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@mixin advantage-icon-3 {
+    background-image: $advantage-icon-3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@mixin advantage-icon-4 {
+    background-image: $advantage-icon-4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+//sticky navigation
+@mixin sticky-nav-icon-1 {
+    background-image: $sticky-nav-icon-1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+@mixin sticky-nav-icon-2 {
+    background-image: $sticky-nav-icon-2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin sticky-nav-icon-3 {
+    background-image: $sticky-nav-icon-3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin sticky-nav-icon-4 {
+    background-image: $sticky-nav-icon-4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+@mixin sticky-nav-icon-5 {
+    background-image: $sticky-nav-icon-5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+@mixin sticky-nav-icon-1--focus {
+    background-image: url("../img/sticky-nav-icon-1--focus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}

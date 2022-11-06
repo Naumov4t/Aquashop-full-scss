@@ -1,0 +1,42 @@
+//colors
+$white: #ffffff;
+$main-dark: #0D0F2E;
+$grey: #D3DDDE;
+$aqua-blue: #00D1DE;
+$mint-green: #00DEB6;
+$pirple: #CC00DE;
+
+$gradient: linear-gradient(to right, #00D1DE, #CC00DE);
+$desk-gradient: linear-gradient(to right,#ffffff,#ffffff,#00D1DE,#CC00DE);
+$desk-footer-gradient: linear-gradient(to right,#0D0F2E,#0D0F2E,#00D1DE,#CC00DE);
+$dark-gradient: linear-gradient(to top, #000000 20%, transparent);
+
+$advantage-text-1: #3094DE;
+$advantage-text-2: #5664DE;
+$advantage-text-3: #7240DE;
+$advantage-text-4: #A302DE;
+
+//icons
+$move-btn-icon: url("../img/arrow-icon.svg");
+$advantage-icon-1: url("../img/advantage-icon-1.svg");
+$advantage-icon-2: url("../img/advantage-icon-2.svg");
+$advantage-icon-3: url("../img/advantage-icon-3.svg");
+$advantage-icon-4: url("../img/advantage-icon-4.svg");
+
+$sticky-nav-icon-1: url("../img/sticky-nav-icon-1.svg");
+$sticky-nav-icon-2: url("../img/sticky-nav-icon-2.svg");
+$sticky-nav-icon-3: url("../img/sticky-nav-icon-3.svg");
+$sticky-nav-icon-4: url("../img/sticky-nav-icon-4.svg");
+$sticky-nav-icon-5: url("../img/sticky-nav-icon-5.svg");
+
+$sticky-nav-icon-1--focus: url("../img/sticky-nav-icon-1--focus.svg");
+
+
+//fonts
+$mobile-section-title: 22px;
+$tablet-section-title: 24px;
+$sm-desktop-section-title: 32px;
+$lg-desktop-section-title: 36px;
+$weight-medium: 500;
+$weight-semi: 600;
+

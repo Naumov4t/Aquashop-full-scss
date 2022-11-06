@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+    <div class="body-container">
+
+        <div class="discount-banner">
+            <p class="discount-banner__text">Preview text discount sale 50%</p>
+            <div class="discount-banner__close-btn"></div>
+        </div>
+
+  
+        @@include("chunk/header.html")
+
+        <!-- desktop navigation section -->
+        <ul class="desktop-navigation">
+            <li class="desktop-navigation__item">Jellyfish</li>
+            <li class="desktop-navigation__item">Food</li>
+            <li class="desktop-navigation__item">Shrimp</li>
+            <li class="desktop-navigation__item">Coral</li>
+            <li class="desktop-navigation__item">Fish</li>
+            <li class="desktop-navigation__item">Aquarium</li>
+        </ul>
+
+        <!-- main section -->
+        <section class="main-section">
+
+            <div class="main-section__drip-icon-top"></div>
+            
+            <div class="main-section__text-wrapper">
+
+                <h1 class="main-section__text">
+                    We offer the best <span>natural gifts</span> for you
+                </h1>
+
+            </div>
+
+            <a href="#offers-section" class="main-section__button"></a>
+
+            <div class="main-section__drip-icon-bottom"></div>
+
+        </section>
+
+        <!-- advantage section -->
+        <section class="advantage-section">
+
+        <ul class="advantage-section__item-list">
+                @@include("chunk/advantage-items.html")
+        </ul>
+
+        </section>
+
+        <!-- offers section -->
+        <section class="offers-section" id="offers-section">
+
+            <h2 class="offers-section__title">The best of the best</h2>
+
+            <ul class="offers-section__item-list">
+                @@include("chunk/offers-items.html")
+            </ul>
+
+            <a href="#" class="offers-section__button">Show more</a>
+
+        </section>
+
+        <!-- news section -->
+        <section class="news-section">
+
+            <h2 class="news-section__title">Hot news about us</h2>
+
+            <ul class="news-section__item-list">
+                @@include("chunk/news-items.html")
+            </ul>
+
+            <a href="#" class="news-section__button">Show more</a>
+
+        </section>
+
+        <!-- reviews section -->
+        <section class="reviews-section">
+
+            <div class="reviews-section__drip-icon-top"></div>
+
+            <h2 class="reviews-section__title">Reviews about our work</h2>
+
+            <div class="reviews-section__slider-container">
+
+                <ul class="reviews-section__slider">
+                    
+
+                    @@include("chunk/reviews-items.html")
+
+                </ul>
+
+                <ul class="reviews-section__controller-wrapper reviews-controller">
+
+                   <li class="reviews-controller__item reviews-controller__item--1 reviews-controller__item--active" data-tab="#tab_0"></li>
+                   <li class="reviews-controller__item reviews-controller__item--2" data-tab="#tab_1"></li>
+                   <li class="reviews-controller__item reviews-controller__item--3" data-tab="#tab_2"></li>
+
+                </ul>
+
+            </div>
+
+            <div class="reviews-section__drip-icon-bottom"></div>
+
+        </section>
+
+        @@include("chunk/footer.html")
+
+        @@include("chunk/sticky-mobile-navigation.html")
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

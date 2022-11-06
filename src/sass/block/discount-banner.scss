@@ -1,0 +1,72 @@
+.discount-banner {
+    padding: 0 25px;
+    height: 60px;
+    background-color: $main-dark;
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    align-items: center;
+    
+
+    &__text {
+        margin: 0;
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: $weight-medium;
+    }
+
+    &__close-btn {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/close-btn.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .discount-banner {
+        padding: 0 65px;
+        height: 65px;
+
+        &__text {
+            justify-self: center;
+            font-size: 16px;
+        }
+
+        &__close-btn {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .discount-banner {
+
+        &__close-btn {
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                transition: .2s;
+                scale: 1.1;
+            }
+
+            &:active {
+                transition: .2s;
+                scale: .98;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .discount-banner {
+
+        &__text {
+            letter-spacing: 2px;
+        }
+    }
+}

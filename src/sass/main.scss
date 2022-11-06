@@ -1,0 +1,37 @@
+@import "font.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "block/header.scss";
+@import "block/footer.scss";
+@import "block/sticky-mobile-navigation.scss";
+@import "block/discount-banner.scss";
+@import "block/desktop-navigation.scss";
+@import "block/main-section.scss";
+@import "block/advantage-section.scss";
+@import "block/offers-section.scss";
+@import "block/news-section.scss";
+@import "block/reviews-section.scss";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+
+
+.body-container {
+    max-width: 1440px;
+    margin: auto;
+    background-color: $white;
+    cursor: default;
+}
+
+ul li {
+    list-style: none;
+}
+
+h2 {
+    font-weight: $weight-semi;
+}

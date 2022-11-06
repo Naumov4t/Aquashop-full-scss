@@ -1,0 +1,43 @@
+@media(max-width: 1023px) {
+   .desktop-navigation {
+        display: none;
+   }
+}
+
+@media(min-width: 1024px) {
+    .desktop-navigation {
+        margin: 50px 100px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: $weight-semi;
+            color: $main-dark;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                color: $aqua-blue;
+                transition: .2s;
+            }
+
+            &:active {
+                scale: .98;
+            }
+        }
+    }
+}
+
+@media(min-width: 1440px) {
+    .desktop-navigation {
+        margin: 55px 130px;
+
+        &__item {
+            font-size: 24px;
+        }
+    }
+}
